@@ -1,9 +1,9 @@
 package ru.practicum.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
+import org.springframework.context.annotation.PropertySource;
 
-@Configuration // помечает класс как java-config для контекста приложения
-@EnableWebMvc  // призывает импортировать дополнительную конфигурацию для веб-приложений
-public class WebConfig {
+@Configuration
+@PropertySource("classpath:/application.properties")
+public class AppConfig {
 }
